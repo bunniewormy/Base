@@ -39,6 +39,8 @@ void onInit(CBlob@ this)
 {
 	this.checkInventoryAccessibleCarefully = true;
 
+	this.Tag("activatable");
+
 	this.addCommandID("unpack");
 	this.addCommandID("getin");
 	this.addCommandID("getout");
