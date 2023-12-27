@@ -512,21 +512,6 @@ void onCommand(CBlob@ this, u8 cmd, CBitStream @params)
 			}
 		}
 	}
-	else if (cmd == this.getCommandID("activate") && isServer())
-	{
-		CPlayer@ p = getNet().getActiveCommandPlayer();
-		if (p is null) return;
-
-		CBlob@ caller = p.getBlob();
-		if (caller is null) return;
-
-		// only activate if caller is holding this crate
-		CBlob@ helditem = caller.getCarriedBlob();
-		if (helditem is null) return;
-		if (helditem !is this) return;
-
-		DumpOutItems(this, 5.0f, caller.getVelocity(), false);
-	}
 }
 
 void BoobyTrap(CBlob@ this, CBlob@ caller, CBlob@ mine)
