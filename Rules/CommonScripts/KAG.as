@@ -23,6 +23,8 @@ void onInit(CRules@ this)
 
 	sv_max_localplayers = 1;
 
+	getNet().legacy_cmd = false;
+
 	PrecacheTextures();
 
 	//smooth shader
