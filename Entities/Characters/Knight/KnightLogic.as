@@ -1145,7 +1145,7 @@ void onCommand(CBlob@ this, u8 cmd, CBitStream @params)
 
 		CycleToBombType(this, type);
 	}
-	else if (cmd == this.getCommandID("activate/throw"))
+	else if (cmd == this.getCommandID("activate/throw") && isServer())
 	{
 		SetFirstAvailableBomb(this);
 	}
