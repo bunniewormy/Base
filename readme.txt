@@ -38,7 +38,7 @@ DEDICATED SERVER:
 	See server_setup_info.txt
 
 USEFUL LINKS:
-
+czxcxz
 	
 	https://kag2d.com - The official KAG website 
 	https://thd.vg - The Transhuman Design website
