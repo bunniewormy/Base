@@ -306,19 +306,7 @@ void onCommand(CInventory@ this, u8 cmd, CBitStream@ params)
 	{
 		blob.ClearGridMenus();
 
-		CBlob@ target = getBlobByNetworkID(id);
-		if (target is null) return;
-
-		target.ClearGridMenus();
-
-		target.set_u8("build page", cmd - Builder::PAGE_SELECT);
-
-		ClearCarriedBlock(target);
-
-		if (target is getLocalPlayerBlob())
-		{
-			target.CreateInventoryMenu(target.get_Vec2f("backpack position"));
-		}
+		ClearCarriedBlock(blob);
 	}
 	else if (cmd == blob.getCommandID("page select") && isServer())
 	{
